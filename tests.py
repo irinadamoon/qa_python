@@ -52,7 +52,7 @@ class TestBooksCollector:
 
 # книга добавилась в избранное
     def test_add_book_in_favorites_book_added(self, collector, addition, favorite):
-        assert len(collector.get_list_of_favorites_books()) >=1
+        assert collector.get_list_of_favorites_books() == ['Гордость и предубеждение и зомби']
 
 # книга удалилась из избранного
     def test_delete_book_from_favorites_book_delited(self, collector, addition, favorite):
