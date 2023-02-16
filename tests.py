@@ -38,7 +38,7 @@ class TestBooksCollector:
 
 # что что-то получаем на запрос рейтинга книги по имени
     def test_get_book_rating(self, collector, addition):
-        assert collector.get_book_rating('Гордость и предубеждение и зомби') == True
+        assert collector.get_book_rating('Гордость и предубеждение и зомби')
 
 # список книг с корректным рейтингом 5
     def test_get_books_with_specific_rating_5(self, collector, addition):
