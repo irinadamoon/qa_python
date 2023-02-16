@@ -61,7 +61,7 @@ class TestBooksCollector:
 
 # получили список избранных книг
     def test_get_list_of_favorites_books(self, collector, addition, favorite):
-        assert len(collector.get_list_of_favorites_books()) > 0
+        assert collector.get_list_of_favorites_books() == ['Гордость и предубеждение и зомби']
 
 # удаление несуществующей книги не привело к удалению других
     def test_delete_book_from_favorites_non_existed_book(self, collector, addition, favorite):
