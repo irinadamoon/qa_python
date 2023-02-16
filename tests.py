@@ -66,7 +66,7 @@ class TestBooksCollector:
 # удаление несуществующей книги не привело к удалению других
     def test_delete_book_from_favorites_non_existed_book(self, collector, addition, favorite):
         collector.delete_book_from_favorites('Незнайка на Луне')
-        assert 'Гордость и предубеждение и зомби' in collector.get_list_of_favorites_books()
+        assert collector.get_list_of_favorites_books() == ['Гордость и предубеждение и зомби']
 
 # установить рейтинг выше 10 невозможно
     def test_test_set_book_rating_set_rating_15_is_not_possible(self, collector, addition):
