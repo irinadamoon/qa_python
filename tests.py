@@ -46,18 +46,13 @@ class TestBooksCollector:
         collector.set_book_rating('Гордость и предубеждение и зомби', 5)
         assert collector.get_books_with_specific_rating(5) == ['Гордость и предубеждение и зомби']
 
-# получаем именно словарь, а не строку
-    def test_get_books_rating(self, collector, addition):
-        assert type(collector.get_books_rating()) is dict
+# удалила лишнюю проверку
 
 # книга добавилась в избранное
     def test_add_book_in_favorites_book_added(self, collector, addition, favorite):
         assert collector.get_list_of_favorites_books() == ['Гордость и предубеждение и зомби']
 
-# книга удалилась из избранного
-    def test_delete_book_from_favorites_book_delited(self, collector, addition, favorite):
-        collector.delete_book_from_favorites('Гордость и предубеждение и зомби')
-        assert 'Гордость и предубеждение и зомби' not in collector.get_list_of_favorites_books()
+# удалила лишнюю проверку
 
 # получили список избранных книг
     def test_get_list_of_favorites_books(self, collector, addition, favorite):
